@@ -19,14 +19,20 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = ("true" === "true");
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5;
 console.log("Total Age: " + totalAge);
+
+let totalFunds = Number("1000") - "500";
+console.log("Total Funds: " + totalFunds);
+
+let remainingMoney = "1000" - "500";
+console.log("Remaining Money: " + remainingMoney);
